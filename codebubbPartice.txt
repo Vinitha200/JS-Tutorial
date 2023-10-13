@@ -1,0 +1,46 @@
+1.WRP to check 2 no true if anyone is 100 or return true if sum of 2 is 100 else false
+=======================================================================================
+const a = prompt("value a")
+const b = prompt("value b")
+const sum = JSON.parse(a)+JSON.parse(b)
+console.log(sum)
+if(a==100||b==100){
+     console.log(true)
+}
+else if(sum==100){
+    console.log(true)
+}
+else{
+    console.log(false)
+}
+
+const isEqualto100 = (a,b)=>{
+    if(a===100||b===100||(a+b)===100) {return true}
+    else{
+        return false
+    }
+}
+
+console.log(isEqualto100(100,1))
+
+2.Return extention of a string
+==============================
+const extention = (str)=>{
+    const last = str.lastIndexOf(".")
+    return str.slice(last)
+}
+
+console.log(extention("index.js"))
+
+3.Print current Date:
+====================
+
+function currentDate(date=new Date()){
+    console.log(date)
+    const date1 = date.getDate()
+    const month = date.getMonth()+1
+    const year = date.getFullYear()
+ console.log(date1,month,year)
+ return date1+"-"+month+"-"+year
+}
+console.log(currentDate())

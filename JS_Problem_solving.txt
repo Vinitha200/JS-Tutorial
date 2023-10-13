@@ -1,0 +1,163 @@
+remove Duplicate elemnt
+=========================
+const arr = [1,2,2,4]
+const res = [...new Set(arr)]
+
+const res1 = arr.filter((item,index)=>{
+     return arr.indexOf(item)===index
+})
+console.log(res1)
+console.log(res);
+
+swap 2 element without temp
+=========================
+var a=10
+var b=2
+
+a=a+b
+b=a-b
+a=a-b
+console.log(a,b)
+
+captialize 1st letter of string
+=========================
+let word = "shot"
+console.log(word[0].toUpperCase()+word.slice(1))
+
+
+reverse the string
+=========================
+
+let str="Welcome"
+
+let new_str = ""
+for(i=str.length-1;i>=0;i--){
+    console.log(str[i])
+    new_str = new_str+str[i]
+}
+console.log(new_str)
+
+let arr = [1,2,3]
+
+let newarr=[]
+for(let i=arr.length-1;i>=0;i--){
+    newarr.push(arr[i])
+}
+console.log(newarr)
+
+
+palindrome
+=========================
+let org_word = "mam"
+let rev = org_word.split('').reverse().join('')
+
+console.log(org_word===rev)
+
+const arr = [2,3,4]
+
+Min and Max in array
+=========================
+function max(arr){
+  var max=0
+  arr.map((item)=>{
+      if(item>max){
+          max=item
+      }
+  })
+  return max
+}
+
+function min(arr){
+  var min=Infinity
+  arr.map((item)=>{
+      if(item<min){
+          min=item
+      }
+  })
+  return min
+}
+
+Duplicate form array of object
+=========================
+const books = [
+    { title: "C++", author: "Bjarne" },
+    { title: "Java", author: "James" },
+    { title: "Python", author: "Guido" },
+    { title: "Java", author: "James" },
+      { title: "Python", author: "Guido" },
+];
+ 
+const ids = books.map((item) => item.title);
+const filtered = books.filter((item, index) =>
+    !ids.includes(item.title, index + 1));
+ 
+console.log(filtered);
+
+console.log(min(arr))
+
+Finding 2nd largest element and removing 1st largest
+====================================================
+const arr = [2,3,4]
+function max(arr){
+  var max=0
+  arr.map((item)=>{
+      if(item>max){
+          max=item
+      }
+  })
+ return max
+}
+const First_Max=max(arr)
+console.log(First_Max)
+//remove First_Max from array
+arr.splice(arr.indexOf(First_Max))
+//console.log(arr) mutate original Array [ 2, 3 ]
+const second_Max=max(arr)
+console.log(second_Max)
+
+
+sum of array
+===============
+let arr=[1,2]
+const sum = arr.reduce((acc,curr)=>{
+    return acc+=curr
+},0)
+
+console.log(sum)
+
+check the no.of.occurence of character in a string 
+==================================================
+function countOccur(str){
+    if(str.length<=0){
+        console.log("Enter valid string ")
+    }
+    
+    for(let i=0;i<str.length;i++){
+        var count = 0
+        for(let j=0;j<str.length;j++){
+            if(str[i]===str[j]){
+                count++
+            }
+        }
+    console.log(`${str[i]} occurs ${count} times`)    
+    }
+}
+
+countOccur("hello")
+
+find vowels in a string
+==========================
+const str = "hello"
+const vowels=['a','e','i','o','u']
+
+let newarr = []
+for(let i in str){
+    if(vowels.includes(str[i])){
+        newarr.push(str[i])
+    }
+}
+
+console.log(newarr)
+ 
+
+
