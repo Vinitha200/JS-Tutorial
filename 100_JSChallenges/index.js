@@ -772,3 +772,135 @@ function WelcomeCity(arr,state,city){
 }
 
 console.log(WelcomeCity(["vinitha","shanmugam"], 'bangalore' ,'karanataka' ))
+
+//81.Expressions Matter
+function Expressions_Matter(a,b,c){
+    return Math.max(
+        a+b+c,
+        a*b*c,
+        a*(b+c),
+        c*(a+b)    )
+}
+
+//82.Filter out the geese
+function geese (arr1,arr2){
+    
+    let filtered = arr1.filter((i)=>{
+         return !arr2.includes(i)
+    })
+    return filtered
+}
+
+console.log(geese(["bjhgsd","geese","Lion","Dog"],["Dog","Cat"]))
+
+//83.What is between 
+function whatBetween(num1, num2 ){
+    let arr=[]
+    let start = 0
+    let end = 0
+    if(num1<num2){
+      start=num1
+      end=num2
+    }
+    else{
+        start=num2
+        end=num1
+    }
+    console.log(start,end)
+    for(let i=start;i<=end;i++){
+      
+        arr.push(i)
+    }
+    return arr
+}
+
+console.log(whatBetween(10,4))
+
+//84. postion and roll 
+//(3,6)=>15 calculate from current position and roll is dice is done 2 times
+
+function postion (position,roll){
+    return position+(roll*2)
+}
+console.log(postion(3,6))
+
+//85.N th Power 
+// [1,2,3,4] N=2 --> 3^2=9
+function Npower(arr,N){
+    if(N>=arr.length-1)
+     {  
+        return -1
+    }
+    else{
+        return arr[N]**N 
+    }
+    
+}
+
+console.log(Npower([1,2,3,4],2))
+console.log(Npower([1,2,3],3))
+
+//86.Grasshopper Messi goals function 
+function sum (a,b,c){
+    return a+b+c
+}
+console.log(2,10,5)
+
+//86.Stringy Strings
+//6 => 101010
+function Stringy(size){
+    let str='1'
+    for(let i=2;i<=size;i++){
+        if(i%2===0){
+            str+=0
+        }
+        else{
+            str+=1
+        }
+    }
+    return str
+}
+console.log(Stringy(6))
+console.log(Stringy(4))
+
+//87.
+function multiplyLimit(N,Limit){
+    let arr = []
+    for(let i=1;i<Limit;i++){
+        arr.push( i*N)
+    }
+
+    return arr.filter((i)=>i<=Limit)
+}
+
+console.log(multiplyLimit(2,6))
+console.log(multiplyLimit(5,25))
+
+//88.Remove duplicate form array or list
+function Remove_duplicate(arr){
+    return [...new Set(arr)]
+}
+console.log(Remove_duplicate([1,2,1]))
+
+//89.Sum of Multiples 
+function SumOfMulti(n,m){
+    let arr = []
+    for(let i=1;i<m;i++){
+        arr.push( i*n)
+    }
+
+    return arr.filter((i)=>i<=m).reduce((acc,curr)=> acc+curr ,0)
+}
+console.log(SumOfMulti(2,9))
+console.log(SumOfMulti(3,13))
+
+//90- Name on billboard 
+function billboard (name,price=30){
+    let result = 0
+    for(let i=0;i<name.length;i++){
+        result+=price
+    }
+    return result
+}
+
+ //             ---------------------------x-----------------------x------------------------------
