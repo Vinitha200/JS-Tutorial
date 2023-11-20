@@ -207,3 +207,54 @@ function modify1 (arr,city){
     return modification
 }
 console.log(modify1(arr1,"chennai"))
+
+
+
+//ARRAY OF OBJECT:
+//1.Filtering objects based on a condition: age < 30
+const data = [
+    { name: 'Alice', age: 25 },
+    { name: 'Bob', age: 30 },
+    { name: 'Charlie', age: 20 }
+]
+
+let res= data.filter((item)=>item?.age<30)
+console.log(res)
+
+//2.Sorting objects by a property:
+data.sort((a,b)=>a.age - b.age)//ascending order
+data.sort((a,b)=>a.age - b.age).reverse() //descending order
+console.log(data)
+
+const data1 = [
+    { name: 'Alice', age: 25, gender: 'female' },
+    { name: 'Bob', age: 30, gender: 'male' },
+    { name: 'Charlie', age: 20, gender: 'male' }
+  ];
+  
+  const groupedByGender = data1.reduce((acc, obj) => {
+    const key = obj.gender;
+    console.log(key)
+    if (!acc[key]) {
+      acc[key] = [];
+    }
+    acc[key].push(obj);
+    return acc;
+  }, {});
+  
+  console.log(groupedByGender);
+  
+
+  const data3 = [
+    { id: 1, name: 'Alice' },
+    { id: 2, name: 'Bob' },
+    { id: 1, name: 'Alice' }
+  ];
+
+  const uniqueid = data3.map(({id})=>id) //destructor
+  const id  = data3.map((item)=>{
+    return item?.id})
+  console.log(id)
+  const remove_dup = data3?.filter((item,index)=>{
+    return !uniqueid.includes(item?.id,index+1)})
+  console.log(remove_dup)
